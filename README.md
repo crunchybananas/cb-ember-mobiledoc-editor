@@ -3,7 +3,9 @@ cb-ember-mobiledoc-editor
 
 [![CI](https://github.com/crunchybananas/cb-ember-mobiledoc-editor/actions/workflows/ci.yml/badge.svg)](https://github.com/crunchybananas/cb-ember-mobiledoc-editor/actions/workflows/ci.yml)
 
-A simple wrapper for MobileDoc
+A simple wrapper for [MobileDoc](https://bustle.github.io/mobiledoc-kit/demo/).
+Heavily inspired by https://github.com/bustle/ember-mobiledoc-editor but using
+modern Ember techniques.
 
 Compatibility
 ------------------------------------------------------------------------------
