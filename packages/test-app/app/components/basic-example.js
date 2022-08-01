@@ -16,7 +16,7 @@ export default class BasicExampleComponent extends Component {
     ]
   }
 
-  get basicContent() {
+  get jsonContent() {
     return JSON.stringify(this.content);
   }
 

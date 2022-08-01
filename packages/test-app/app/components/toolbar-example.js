@@ -10,7 +10,7 @@ export default class ToolbarExampleComponent extends Component {
     cards: [],
     sections: [
       [1, "p", [
-        [0, [], 0, "Welcome to Mobiledoc Basic Content"]
+        [0, [], 0, "Welcome to Mobiledoc Toolbar Content"]
       ]]
 
     ]
@@ -18,7 +18,7 @@ export default class ToolbarExampleComponent extends Component {
 
   editor = null;
 
-  get basicContent() {
+  get jsonContent() {
     return JSON.stringify(this.content);
   }
 
