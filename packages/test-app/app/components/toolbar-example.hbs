@@ -1,0 +1,17 @@
+<h3>Toolbar Example</h3>
+<Mobiledoc::Editor
+  @content={{this.content}}
+  @postDidChange={{this.postDidChange}}
+  @editorDidLoad={{this.editorDidLoad}}
+>
+  <:toolbar>
+    <div class="toolbar">
+      <button data-action="toggleSection" data-args="h1">H1</button>
+      <button data-action="toggleSection" data-args="h2">H2</button>
+      <button data-action="toggleMarkup" data-args="strong">strong</button>
+      <button data-action="toggleMarkup" data-args="em">em</button>
+    </div>
+  </:toolbar>
+</Mobiledoc::Editor>
+
+{{this.basicContent}}
