@@ -1,7 +1,7 @@
 {
   "name": "cb-ember-mobiledoc-editor",
   "version": "0.0.7",
-  "description": "Echarts for Ember",
+  "description": "Ember Mobiledoc Wrapper",
   "keywords": [
     "ember-addon"
   ],
