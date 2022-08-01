@@ -13,6 +13,10 @@ Compatibility
 * Ember.js v4.0.0 or above
 * Embroider or ember-auto-import v2
 
+### Demo
+
+https://crunchybananas.github.io/cb-ember-mobiledoc-editor/
+
 
 Installation
 ------------------------------------------------------------------------------
