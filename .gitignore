@@ -2,7 +2,7 @@
 
 # compiled output
 dist/
-
+deploy-test-app
 # dependencies
 node_modules/
 
