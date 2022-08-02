@@ -4,17 +4,12 @@ import { action } from '@ember/object';
 
 export default class ToolbarExampleComponent extends Component {
   @tracked content = {
-    version: "0.3.2",
+    version: '0.3.2',
     markups: [],
     atoms: [],
     cards: [],
-    sections: [
-      [1, "p", [
-        [0, [], 0, "Welcome to Mobiledoc Toolbar Content"]
-      ]]
-
-    ]
-  }
+    sections: [[1, 'p', [[0, [], 0, 'Welcome to Mobiledoc Toolbar Content']]]],
+  };
 
   editor = null;
 
@@ -26,25 +21,41 @@ export default class ToolbarExampleComponent extends Component {
   editorDidLoad(editor, element) {
     let elm = element.parentElement;
 
-    elm.querySelector('button[data-args=h1]').addEventListener('click', (evt) => {
-      editor.toggleSection('h1');
-      evt.preventDefault();
-    }, true);
+    elm.querySelector('button[data-args=h1]').addEventListener(
+      'click',
+      (evt) => {
+        editor.toggleSection('h1');
+        evt.preventDefault();
+      },
+      true
+    );
 
-    elm.querySelector('button[data-args=h2]').addEventListener('click', (evt) => {
-      editor.toggleSection('h2');
-      evt.preventDefault();
-    }, true);
+    elm.querySelector('button[data-args=h2]').addEventListener(
+      'click',
+      (evt) => {
+        editor.toggleSection('h2');
+        evt.preventDefault();
+      },
+      true
+    );
 
-        elm.querySelector('button[data-args=strong]').addEventListener('click', (evt) => {
-      editor.toggleMarkup('strong');
-      evt.preventDefault();
-    }, true);
+    elm.querySelector('button[data-args=strong]').addEventListener(
+      'click',
+      (evt) => {
+        editor.toggleMarkup('strong');
+        evt.preventDefault();
+      },
+      true
+    );
 
-    elm.querySelector('button[data-args=em]').addEventListener('click', (evt) => {
-      editor.toggleMarkup('em');
-      evt.preventDefault();
-    }, true);
+    elm.querySelector('button[data-args=em]').addEventListener(
+      'click',
+      (evt) => {
+        editor.toggleMarkup('em');
+        evt.preventDefault();
+      },
+      true
+    );
   }
 
   @action

@@ -1,15 +1,15 @@
 /* eslint-env node */
 'use strict';
 
-  // branch: 'deploys',
-  // worktreePath: '/tmp/ef4-deploy',
-  // commitMessage: 'Deployed %@'
+// branch: 'deploys',
+// worktreePath: '/tmp/ef4-deploy',
+// commitMessage: 'Deployed %@'
 
-module.exports = function(deployTarget) {
+module.exports = function (deployTarget) {
   let ENV = {
     repo: 'git@github.com:crunchybananas/cb-ember-mobiledoc-editor.git',
     branch: 'gh-pages',
-    build: {}
+    build: {},
     // include other plugin configuration that applies to all deploy targets here
   };
 
