@@ -8,8 +8,8 @@ const t=require("ember-modifier")
 var i=o.n(t),n=o(198)
 class a extends(i()){modify(e,r){let[o,t,i]=r
 if(!this.editor){const r={mobiledoc:o}
-this.editor=new n.ML(r),this.editor.render(e),this.editor.postDidChange(((e,r,o)=>{t?.(this.editor.serialize())})),i?.(this.editor,e)}}}},730:(e,r,o)=>{var t,i
-e.exports=(t=_eai_d,i=_eai_r,window.emberAutoImportDynamic=function(e){return 1===arguments.length?i("_eai_dyn_"+e):i("_eai_dynt_"+e)(Array.prototype.slice.call(arguments,1))},window.emberAutoImportSync=function(e){return i("_eai_sync_"+e)(Array.prototype.slice.call(arguments,1))},t("cb-ember-mobiledoc-editor/components/mobiledoc/editor",[],(function(){return o(820)})),void t("cb-ember-mobiledoc-editor/modifiers/mobiledoc-editor",[],(function(){return o(947)})))},77:function(e,r){window._eai_r=require,window._eai_d=define}},o={}
+this.editor=new n.ML(r),this.editor.render(e),this.editor.postDidChange(((e,r,o)=>{t?.(this.editor.serialize())})),i?.(this.editor,e)}}}},993:(e,r,o)=>{var t,i
+e.exports=(t=_eai_d,i=_eai_r,window.emberAutoImportDynamic=function(e){return 1===arguments.length?i("_eai_dyn_"+e):i("_eai_dynt_"+e)(Array.prototype.slice.call(arguments,1))},window.emberAutoImportSync=function(e){return i("_eai_sync_"+e)(Array.prototype.slice.call(arguments,1))},t("cb-ember-mobiledoc-editor/components/mobiledoc/editor",[],(function(){return o(820)})),void t("cb-ember-mobiledoc-editor/modifiers/mobiledoc-editor",[],(function(){return o(947)})))},639:function(e,r){window._eai_r=require,window._eai_d=define}},o={}
 function t(e){var i=o[e]
 if(void 0!==i)return i.exports
 var n=o[e]={exports:{}}
@@ -26,6 +26,6 @@ var r=(r,o)=>{var i,n,[a,d,l]=o,c=0
 if(a.some((r=>0!==e[r]))){for(i in d)t.o(d,i)&&(t.m[i]=d[i])
 if(l)var u=l(t)}for(r&&r(o);c<a.length;c++)n=a[c],t.o(e,n)&&e[n]&&e[n][0](),e[n]=0
 return t.O(u)},o=globalThis.webpackChunk_ember_auto_import_=globalThis.webpackChunk_ember_auto_import_||[]
-o.forEach(r.bind(null,0)),o.push=r.bind(null,o.push.bind(o))})(),t.O(void 0,[198],(()=>t(77)))
-var i=t.O(void 0,[198],(()=>t(730)))
+o.forEach(r.bind(null,0)),o.push=r.bind(null,o.push.bind(o))})(),t.O(void 0,[198],(()=>t(639)))
+var i=t.O(void 0,[198],(()=>t(993)))
 i=t.O(i),__ember_auto_import__=i})()
