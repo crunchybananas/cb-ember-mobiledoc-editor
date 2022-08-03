@@ -37,4 +37,9 @@ export default class CardExampleComponent extends Component {
       true
     );
   }
+
+  @action
+  postDidChange(content) {
+    this.content = content;
+  }
 }
