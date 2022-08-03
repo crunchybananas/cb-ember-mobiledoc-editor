@@ -72,6 +72,11 @@ before linking and then reinstall the dependencies for the link to work.
 
 Why this addon?
 ------------------------------------------------------------------------------
+We love this addon and have many projects using the official addon provided by
+Bustle. Over the past few years that addon has not received as much attention
+and has prevented some projects of our from moving to Ember 4.0+. The goal with
+this addon is to provide the smallest amount of custom code and to rely on the
+native implementation as much as possible.
 
 Development
 ------------------------------------------------------------------------------

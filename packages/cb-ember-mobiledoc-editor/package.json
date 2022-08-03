@@ -1,6 +1,6 @@
 {
   "name": "cb-ember-mobiledoc-editor",
-  "version": "0.0.7",
+  "version": "0.0.1",
   "description": "Ember Mobiledoc Wrapper",
   "keywords": [
     "ember-addon"

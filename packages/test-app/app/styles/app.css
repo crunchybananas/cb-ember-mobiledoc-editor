@@ -18,6 +18,8 @@ body {
 .toolbar {
   text-align: center;
   display: flex;
+  margin-top: .25rem;
+  margin-bottom: .25rem;
 }
 
 .toolbar-section {
@@ -25,7 +27,6 @@ body {
 }
 
 .toolbar-section button {
-  height: 24px;
   display: flex;
   align-items: center;
   margin: 0 4px;
