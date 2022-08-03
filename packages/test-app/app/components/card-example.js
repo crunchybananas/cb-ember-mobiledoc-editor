@@ -3,7 +3,7 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
 export default class CardExampleComponent extends Component {
-   @tracked content = {
+  @tracked content = {
     version: '0.3.2',
     markups: [],
     atoms: [],

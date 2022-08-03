@@ -21,41 +21,18 @@ export default class ToolbarExampleComponent extends Component {
   editorDidLoad(editor, element) {
     let elm = element.parentElement;
 
-    elm.querySelector('button[data-args=h1]').addEventListener(
-      'click',
-      (evt) => {
-        editor.toggleSection('h1');
-        evt.preventDefault();
-      },
-      true
-    );
+    elm.querySelector('.toolbar').addEventListener('click', (evt) => {
+      let isButton = event.target.nodeName === 'BUTTON';
 
-    elm.querySelector('button[data-args=h2]').addEventListener(
-      'click',
-      (evt) => {
-        editor.toggleSection('h2');
-        evt.preventDefault();
-      },
-      true
-    );
+      if (isButton) {
+        let button = evt.target;
 
-    elm.querySelector('button[data-args=strong]').addEventListener(
-      'click',
-      (evt) => {
-        editor.toggleMarkup('strong');
-        evt.preventDefault();
-      },
-      true
-    );
+        let action = button.dataset['action'];
+        let args = button.dataset['args'].split(',');
 
-    elm.querySelector('button[data-args=em]').addEventListener(
-      'click',
-      (evt) => {
-        editor.toggleMarkup('em');
-        evt.preventDefault();
-      },
-      true
-    );
+        editor[action](...args);
+      }
+    });
   }
 
   @action

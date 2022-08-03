@@ -4,9 +4,9 @@
 // export NODE_OPTIONS="--require /Users/bardzusny/node-15-for-ember-monkeypatching.js"
 
 // 1. Don't exit Node process on uncaught exceptions, keeping Node 14 behaviour. Required to not crash Ember server on type errors thrown by ember-cli-typescript
-process.on("uncaughtException", function (err) {
+process.on('uncaughtException', function (err) {
   console.error(err.stack);
-  console.log("Node NOT Exiting...");
+  console.log('Node NOT Exiting...');
 });
 
 // 2. Monkey-patching Array.prototype.forEach: to detect specific build step call from a specific file, based on a stack trace - and add special sauce for it to work OK with Node 15+:
@@ -17,20 +17,19 @@ process.on("uncaughtException", function (err) {
 // ...
 
 let specialForEachRegexp = new RegExp(
-  "at dispatchQueuedRequests.*node_modules/workerpool/lib/WorkerHandler.js"
+  'at dispatchQueuedRequests.*node_modules/workerpool/lib/WorkerHandler.js'
 );
 
 let origForEach = Array.prototype.forEach;
 
 Array.prototype.forEach = function () {
-  if (specialForEachRegexp.test(new Error().stack.split("\n")[2])) {
+  if (specialForEachRegexp.test(new Error().stack.split('\n')[2])) {
     let sendFunc = arguments[0];
     return origForEach.bind(this)((req) => sendFunc(req)); // sendFunc must receive only one argument, otherwise it errors out
   }
 
   return origForEach.bind(this)(...arguments);
 };
-
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
