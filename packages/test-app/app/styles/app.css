@@ -12,4 +12,5 @@ body {
   height: 15rem;
   border: solid thin gray;
   overflow: auto;
+  padding: 1rem;
 }
