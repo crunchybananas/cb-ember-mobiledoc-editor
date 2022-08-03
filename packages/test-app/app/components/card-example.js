@@ -1,7 +1,16 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
 export default class CardExampleComponent extends Component {
+   @tracked content = {
+    version: '0.3.2',
+    markups: [],
+    atoms: [],
+    cards: [],
+    sections: [[1, 'p', [[0, [], 0, 'Example with a card']]]],
+  };
+
   card = {
     name: 'kitten',
     type: 'dom',
