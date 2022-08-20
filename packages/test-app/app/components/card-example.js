@@ -24,6 +24,17 @@ export default class CardExampleComponent extends Component {
     },
   };
 
+  atom = {
+    name: 'mention',
+    type: 'dom',
+    render() {
+      let el = document.createElement('span');
+      el.setAttribute('style', 'background-color: #CCC;');
+      el.innerText = `@hello`;
+      return el;
+    },
+  };
+
   editor = null;
   element = null;
 
@@ -41,6 +52,16 @@ export default class CardExampleComponent extends Component {
       'click',
       (evt) => {
         editor.insertCard('kitten');
+        evt.preventDefault();
+      },
+      true
+    );
+
+    this.editor.atoms.push(this.atom);
+    this.element.querySelector('.insert-atom').addEventListener(
+      'click',
+      (evt) => {
+        editor.insertAtom('mention');
         evt.preventDefault();
       },
       true
