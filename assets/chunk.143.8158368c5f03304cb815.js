@@ -12,8 +12,8 @@ const o=require("ember-modifier")
 var i=t.n(o),n=t(198)
 class a extends(i()){modify(e,r,t){let{content:o,postDidChange:i,editorDidLoad:a,cards:d=[],atoms:l=[]}=t
 if(!this.editor){const r={mobiledoc:o,placeholder:"Type here",autofocus:!0,cards:d,atoms:l}
-this.editor=new n.ML(r),this.editor.render(e),this.editor.postDidChange(((e,r,t)=>{i?.(this.editor.serialize())})),a?.(this.editor,e)}}}},563:(e,r,t)=>{var o,i
-e.exports=(o=_eai_d,i=_eai_r,window.emberAutoImportDynamic=function(e){return 1===arguments.length?i("_eai_dyn_"+e):i("_eai_dynt_"+e)(Array.prototype.slice.call(arguments,1))},window.emberAutoImportSync=function(e){return i("_eai_sync_"+e)(Array.prototype.slice.call(arguments,1))},o("cb-ember-mobiledoc-editor/components/mobiledoc/editor",[],(function(){return t(76)})),void o("cb-ember-mobiledoc-editor/modifiers/mobiledoc-editor",[],(function(){return t(947)})))},248:function(e,r){window._eai_r=require,window._eai_d=define}},t={}
+this.editor=new n.ML(r),this.editor.render(e),this.editor.postDidChange(((e,r,t)=>{i?.(this.editor.serialize())})),a?.(this.editor,e)}}}},136:(e,r,t)=>{var o,i
+e.exports=(o=_eai_d,i=_eai_r,window.emberAutoImportDynamic=function(e){return 1===arguments.length?i("_eai_dyn_"+e):i("_eai_dynt_"+e)(Array.prototype.slice.call(arguments,1))},window.emberAutoImportSync=function(e){return i("_eai_sync_"+e)(Array.prototype.slice.call(arguments,1))},o("cb-ember-mobiledoc-editor/components/mobiledoc/editor",[],(function(){return t(76)})),void o("cb-ember-mobiledoc-editor/modifiers/mobiledoc-editor",[],(function(){return t(947)})))},678:function(e,r){window._eai_r=require,window._eai_d=define}},t={}
 function o(e){var i=t[e]
 if(void 0!==i)return i.exports
 var n=t[e]={exports:{}}
@@ -30,6 +30,6 @@ var r=(r,t)=>{var i,n,[a,d,l]=t,s=0
 if(a.some((r=>0!==e[r]))){for(i in d)o.o(d,i)&&(o.m[i]=d[i])
 if(l)var c=l(o)}for(r&&r(t);s<a.length;s++)n=a[s],o.o(e,n)&&e[n]&&e[n][0](),e[n]=0
 return o.O(c)},t=globalThis.webpackChunk_ember_auto_import_=globalThis.webpackChunk_ember_auto_import_||[]
-t.forEach(r.bind(null,0)),t.push=r.bind(null,t.push.bind(t))})(),o.O(void 0,[198],(()=>o(248)))
-var i=o.O(void 0,[198],(()=>o(563)))
+t.forEach(r.bind(null,0)),t.push=r.bind(null,t.push.bind(t))})(),o.O(void 0,[198],(()=>o(678)))
+var i=o.O(void 0,[198],(()=>o(136)))
 i=o.O(i),__ember_auto_import__=i})()
