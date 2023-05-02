@@ -8,10 +8,10 @@
       @cards={{this.cards}}
       @atoms={{this.atoms}}
     >
-      <:toolbar>
+      <:toolbar as |toolbar|>
         <div class="toolbar">
-          <button class="insert-card" type="button">Insert Card</button>
-          <button class="insert-atom" type="button">Insert Atom</button>
+          <button type="button" {{on "click" (fn toolbar.insertCard "image")}}>Insert Card</button>
+          <button type="button" {{on "click" (fn toolbar.insertAtom "mention")}}>Insert Atom</button>
         </div>
       </:toolbar>
     </Mobiledoc::Editor>

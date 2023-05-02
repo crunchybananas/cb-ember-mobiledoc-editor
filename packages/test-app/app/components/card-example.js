@@ -12,7 +12,7 @@ export default class CardExampleComponent extends Component {
   };
 
   card = {
-    name: 'kitten',
+    name: 'image',
     type: 'dom',
     render({ env, payload }) {
       const el = document.createElement('div');
@@ -77,25 +77,6 @@ export default class CardExampleComponent extends Component {
   editorDidLoad(editor, element) {
     this.element = element.parentElement;
     this.editor = editor;
-
-    // TODO: Expose 'insertCard' and 'insertAtom' from the editor component
-    this.element.querySelector('.insert-card').addEventListener(
-      'click',
-      (evt) => {
-        editor.insertCard('kitten');
-        evt.preventDefault();
-      },
-      true
-    );
-
-    this.element.querySelector('.insert-atom').addEventListener(
-      'click',
-      (evt) => {
-        editor.insertAtom('mention');
-        evt.preventDefault();
-      },
-      true
-    );
   }
 
   @action

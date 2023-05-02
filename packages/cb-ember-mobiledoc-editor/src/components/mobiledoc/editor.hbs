@@ -1,12 +1,16 @@
-<div class="mobiledoc-canvas">
-  {{yield to="toolbar"}}
+<div class="cb-mobiledoc-editor">
+  {{yield (hash insertCard=this.insertCard insertAtom=this.insertAtom) to="toolbar"}}
 
-  <div {{mobiledoc-editor
-          content=@content
-          postDidChange=@postDidChange
-          editorDidLoad=@editorDidLoad
-          cards=@cards
-          atoms=@atoms
-        }}
+  <div
+    {{mobiledoc-editor
+      content=@content
+      postDidChange=@postDidChange
+      editorDidLoad=this.editorDidLoad
+      cards=@cards
+      atoms=@atoms
+    }}
+    class="cb-mobiledoc-editor__canvas"
   />
 </div>
+
+{{yield (hash insertCard=this.insertCard insertAtom=this.insertAtom)}}
