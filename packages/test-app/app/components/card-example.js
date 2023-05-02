@@ -14,12 +14,35 @@ export default class CardExampleComponent extends Component {
   card = {
     name: 'kitten',
     type: 'dom',
-    render() {
-      let el = document.createElement('figure');
-      el.innerHTML = `
-        <img src="http://placekitten.com/200/100">
-        <figcaption>Image of a kitten</figcaption>
-      `;
+    render({ env, payload }) {
+      const el = document.createElement('div');
+      const img = document.createElement('img');
+      const caption = document.createElement('figcaption');
+      const button = document.createElement('button');
+      img.src = 'https://placekitten.com/200/100';
+      caption.innerText = payload.caption;
+      button.innerText = 'Edit';
+      button.addEventListener('click', () => env.edit());
+      el.appendChild(img);
+      el.appendChild(caption);
+      el.appendChild(button);
+      return el;
+    },
+    edit({ env, payload }) {
+      const el = document.createElement('div');
+      const img = document.createElement('img');
+      const button = document.createElement('button');
+      const input = document.createElement('input');
+      img.src = 'https://placekitten.com/200/100';
+      input.value = payload.caption;
+      input.autofocus = true;
+      button.innerText = 'Save';
+      button.addEventListener('click', () => {
+        env.save({ caption: input.value });
+      });
+      el.appendChild(img);
+      el.appendChild(input);
+      el.appendChild(button);
       return el;
     },
   };
@@ -38,6 +61,14 @@ export default class CardExampleComponent extends Component {
   editor = null;
   element = null;
 
+  get cards() {
+    return [this.card];
+  }
+
+  get atoms() {
+    return [this.atom];
+  }
+
   get jsonContent() {
     return JSON.stringify(this.content);
   }
@@ -47,7 +78,7 @@ export default class CardExampleComponent extends Component {
     this.element = element.parentElement;
     this.editor = editor;
 
-    this.editor.cards.push(this.card);
+    // TODO: Expose 'insertCard' and 'insertAtom' from the editor component
     this.element.querySelector('.insert-card').addEventListener(
       'click',
       (evt) => {
@@ -57,7 +88,6 @@ export default class CardExampleComponent extends Component {
       true
     );
 
-    this.editor.atoms.push(this.atom);
     this.element.querySelector('.insert-atom').addEventListener(
       'click',
       (evt) => {
